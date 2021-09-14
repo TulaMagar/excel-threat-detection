@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>movie collection</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    </head>
+<body>
+  
+  <div class="w3-container w3-center">
+      {% load static %}
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="document" class="file-upload">
+          <button type="submit" class="file-upload-btn">Upload</button>
+        </form>
+  </div>
+
+</body>
+</html>

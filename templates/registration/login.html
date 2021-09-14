@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+   <style>
+    h1 {
+        display: block;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .login {
+        display: flex;
+        text-align: center;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: #a6d9f5;
+    }
+    .btn {
+        display: block;
+        width: 50%;
+        margin: auto;
+        color: #fff;
+        background: #1f81b2;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        border-bottom: 4px solid #06557d;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .btn:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+    .btn:hover {
+        background: #06557d;
+        color: #ffffff;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+    p {
+        text-align: center;
+        font-weight: bold;
+    }
+   </style>
+</head>
+
+<body>
+
+    {% block content %}
+    <div>
+        <form method="post" class="from-group">
+            <br><br>
+            {% csrf_token %}<br><br>
+            {{ form }}<br><br>
+            <button type="submit" class="btn btn-success">Login</button>
+            <p>Don't have an account? Create one: <a href="/registration/register/">here</a></p>
+        </form>
+{% endblock %}
+</div>
+</body>
+</html>
